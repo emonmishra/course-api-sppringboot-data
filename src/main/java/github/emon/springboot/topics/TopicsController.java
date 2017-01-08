@@ -28,7 +28,7 @@ public class TopicsController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/topics")
-	public boolean addTopic(@RequestBody Topic topic) {
+	public Topic addTopic(@RequestBody Topic topic) {
 		return topicService.addTopic(topic);
 	}
 
@@ -38,8 +38,8 @@ public class TopicsController {
 	}
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "/topics/{id}")
-	public boolean deleteTopic(@PathVariable("id") String id) {
-		return topicService.deleteTopic(id);
+	public void deleteTopic(@PathVariable("id") String id) {
+		topicService.deleteTopic(id);
 	}
 
 }
