@@ -1,4 +1,4 @@
-package github.emon.springboot.topics;
+package github.emon.springboot.topic;
 
 import java.util.List;
 
